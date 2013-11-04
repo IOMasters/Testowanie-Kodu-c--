@@ -1,0 +1,3 @@
+[submodule "Dokumentacja"]
+	path = Dokumentacja
+	url = git@github.com:IOMasters/Dokumentacja.git
