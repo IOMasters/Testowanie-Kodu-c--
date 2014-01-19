@@ -4,11 +4,14 @@
 #include "../macros/Assert.h"
 using namespace std;
 
-OpenTestCase(TestExample)
+OpenTestCase(TestExample){assert:AssertTrue(1)}
+Discription("To jest Fajny Test")
+CloseTestCase()
 
-{
-	assert:AssertTrue(0)
-}
+OpenTestCase(TestExample1){assert:AssertTrue(1)}
+Discription("To jest Fajny Test")
+CloseTestCase()
 
-
-CloseTestCase(TestExample)
+OpenTestCase(TestExample2){assert:AssertTrue(1>0)}
+Discription("To jest Fajny Test")
+CloseTestCase()

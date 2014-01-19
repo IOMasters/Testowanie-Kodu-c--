@@ -15,11 +15,16 @@ public:
 			for (int i = 0; i < tests.size(); ++i)
 			{
 				tests[i]->runTest();
+				logger->succes();	
+				logger->sendMessage(tests[i]->discription()+"Complete Sucess! ");	
 			}
-			logger->sendMessage("Test Complete Sucess!");			
+			logger->sendMessage("Test Complete Sucess! ");
+
 		}
 		catch(AssertException e) {
-			logger->sendMessage("Test Failiure"+e.what());
+			logger->failed();
+			logger->sendMessage("Test Failiure "+e.what());
+			
 		}
 		
 	}
@@ -29,7 +34,7 @@ public:
 		{
 			delete tests[i];
 		}
-		logger->sendMessage("Test Finish");
+		
 		delete logger;
 
 	}

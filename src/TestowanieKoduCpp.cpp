@@ -9,6 +9,8 @@ int main(int argc, const char* argv[]) {
 
 	TestExecute exec(new ConsoleLogger());
 	exec.addTests(new TestExample());
+	exec.addTests(new TestExample1());
+	exec.addTests(new TestExample2());
 	exec.runTests();
 
 
