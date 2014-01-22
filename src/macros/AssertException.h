@@ -1,4 +1,5 @@
 #include <exception>
+#pragma once
 using namespace std;
 
 class AssertException 

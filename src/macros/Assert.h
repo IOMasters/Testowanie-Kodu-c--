@@ -1,9 +1,17 @@
 #include "AssertException.h"
-
+#pragma once
 namespace assertion {
 
-#define AssertEqual(X,Y) if(!(X)==(Y)) throw AssertException("Wartośc nie są sobie równe");
-#define AssertNotNull(X) if((X)==0){throw AssertException("Wartość jest rówan null");}
-#define AssertNull(X) if((X)!=0){throw AssertException("Wartość nie jest rówan null");}
-#define AssertTrue(X) if(!(X)) throw AssertException("Wartość  jest fałszem");
+#define AssertEqual(X,Y) AssertTrue((X)==(Y))
+#define AssertNotNull(X) AssertTrue((X)!=0)
+#define AssertNull(X) AssertTrue((X)==0)
+
+
+	template<typename T>
+	void AssertTrue (T a)
+	{
+
+	  if(!a)throw AssertException("Wartość  jest fałszem");
+
+	}
 }; // assertion

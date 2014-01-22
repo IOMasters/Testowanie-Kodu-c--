@@ -1,5 +1,5 @@
 #include <vector>
-
+#pragma once
 class TestCase
 {
 public:

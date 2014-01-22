@@ -14,7 +14,9 @@ public:
 		{
 			for (int i = 0; i < tests.size(); ++i)
 			{
+				tests[i]->beforeTest();
 				tests[i]->runTest();
+				tests[i]->afterTest();
 				logger->succes();	
 				logger->sendMessage(tests[i]->discription()+"Complete Sucess! ");	
 			}
